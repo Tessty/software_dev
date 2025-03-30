@@ -7,38 +7,99 @@
 
 </head>
 <body>
+    <h1>Ordered List</h1>
+    <ol type="a">
+        <li>Never give up!</li>
+        <li>Always complete class and lab assignments!</li>
+    </ol>
     
-    <h1 class="title">Lists</h1>
-    <p>This is a paragraph.</p>
-    <p><b>How to pass this course with a good grade:</b></p>
-<ol>
-<li>Never miss classes</li>
-<li>Always participate in class activities and finish them on time</li>
-<li>Dedicate at least 2 hours of my free time to practice the codes I learned in
-class</li>
-<li>Seek help from my professor, classmates, or tutors in case I do not
-understand the class material</li>
-<li> Never give up!</li>
-</ol>
+    <h2>Unordered List</h2>
+    <ul>
+        <li>Apples</li>
+        <li>Oranges</li>
+        <li>Grapes</li>
+    </ul>
+<br>
+    <h2>Definition or description list</h2>
+        <dl>
+            <dt><b>Cats</b></dt>
+            <dd>The cat is a domesticated</dd>
+            <dt><strong>Dogs</strong></dt>
+            <dd>The dog is a domesticated decendant of the wolf.</dd>
+        </dl>
+    <h2 id="tables">Tables</h2>
+    <table border="1">
+        <tr>
+            <td>Column 1</td>
+            <td>Column 2</td>
+            <td>Column 3</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>20</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>60</td>
+            <td>90</td>
+            <td>120</td>
+        </tr>
+    </table>
+
     <br>
     <table>
-        <tr bgcolor="lightblue">
-            <td></td>k<h1 class="title">This is a heading</h1>
-            <p>This is a paragraph.</p>
+        <tr bgcolor="yellow">
             <th>Saturday</th>
             <th>Sunday</th>
         </tr>
         <tr> 
-            <th> Ticket Sold</th>
-            <td> align=" center">120</td>
-            <td> align=" center">135</td>
+            <th> Ticket Sold:</th>
+            <td align=" center">120</td>
+            <td align=" center">135</td>
         </tr>
-        <h2>DEfinition or description list</h2>
-        <dl>
-            <dt><strong>Dogs</strong></dt>
-        </dl>
-        </table>
-        <h2 id="imageslink">images</h2>
+        <tr>
+            <th align="left">Total sales:</th>
+            <td align="center" bgcolor="aqua">$600</td>
+            <td align="center">$675</td>
+        </tr>
+    </table>
+    <br>
+    <table width="400" height="120" bgcolor="lightgreen" border="1">
+        <thead>
+        <tr bgcolor="lightgray">
+            <th colspan="2">Dancing Course Fee</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th align="left">Adult, 18+ years old</th>
+            <td align="center">$250</td>
+        </tr>
+        <tr>
+            <th align="left">Teen, between 17-18 years old</th>
+            <td align="center">$135.55</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <th colspan="2" align="left" bgcolor="white">Cash or credit payment</th>
+        </tr>
+        </tfoot>
+    </table>
+    <br>
+    <table border="1" width="300" height="80">
+        <tr>
+            <th rowspan="2" bgcolor="lightblue" align="center">
+            Merged Rows</th>
+            <td>Row 1, Cell 2</td>
+        </tr>
+        <tr>
+            <td>Row 2, Cell 2</td>
+        </tr>
+    </table>
+    <br>  
+    
+        <h2 id="images">images</h2>
         <hr>
         <img src="images/view_from_window.jpg" alt="pictur From Pixels" width="300px" title="pixels image">
         <img src="images/view_from_window.jpg" alt="pictur From Pixels" width="300px" title="pixels image">
@@ -47,6 +108,7 @@ understand the class material</li>
             <img src="images/view_from_window.jpg" alt="pictur From Pixels" width="300px" title="pixels image">
             <figcaption> I love Nature --- 2025</figcaption>
         </figure>
+    
 
         <h2 id="links">LINKS</h2>
         <hr>
@@ -103,12 +165,12 @@ understand the class material</li>
             <span>|</span>
             <a href="#links">Links</a>
             <span>|</span>
-            <a href="#imageslink"></a>
+            <a href="#images">Images</a>
         </nav>
         <p><abbr title="HyperText Markup Language"></abbr> code describes the <em><b>structure</b></em></p>
         <h2> Lab Excercise 3: Html basics</h2>
         <nav>
-            <a href="">Lab Exercise 3:Html basics</a>
+            <a href="exercise3.html">Lab Exercise 3:Html basics</a>
         </nav>
 </body>
 </html>
