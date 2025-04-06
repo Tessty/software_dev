@@ -112,7 +112,7 @@ figcaption{margin-bottom: 50px;}
     width: 30%;
     border-radius: 10px;
     overflow: hidden;
-    margin: 2%; /* adjust the percent to put 3 cards in a row 5% 1% or 25*/
+    margin: 5% 1%; /* adjust the percent to put 3 cards in a row 5% 1% or 25*/
     box-shadow: 1px 1px 3px gray;
 }
 
@@ -134,11 +134,169 @@ figcaption{margin-bottom: 50px;}
 
 .card2:hover{
     box-shadow: 0px 0px 3px 1px gray;
-    border: dashed 2px gray;
+
 
 }
 .card2:hover .linkcard2{
+    background-color: crimson;
+    text-decoration: underline;
 
 }
 
+.navbar{
+    /*background-color: purple;(this make backkground color behide the box)*/
+    width: 300px;
+}
+.navbar li{
+    list-style-type: none;
+    /*margin-left: -20px; make the list to the left side of the box little bit*/
+}
+.navbar li a{
+    background-color: purple; /*same thing as margin-left in .navbar li*/
+    color: white;
+    display: block;
+    padding: 20px;
+}
+.navbar li a:hover{
+    background-color: lightblue;
+    color: purple;
+    text-decoration: underline;
+    font-weight: 900;
+    border: 1px solid purple;
+}
 
+html{scroll-behavior: smooth;} /*the scroll behavior to be smooth*/
+*{box-sizing: border-box;} /*help to control the width of element not to go left/right*/
+.navbarhorizontal {
+    background-color: orangered;
+}
+.navbarhorizontal a{
+    color: whitesmoke;
+    text-decoration: none;
+    background-color: aqua;
+    display: inline-block;
+    width: 24.6%;
+    text-align: center;
+    padding: 20px; /*use box-sizing to control this padding element*/
+    
+}
+.navbarhorizontal a:hover{
+    background-color:  black;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+/*color*/
+.rgbcontainer, .hexcontainer{
+    border: solid gray 1px;
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+    padding: 20px
+
+}
+.rgbcontainer div, .hexcontainer div{
+    border: solid green 1px;
+    width: 100px;
+    height: 50px;
+}
+
+.rgbcontainer div:nth-child(1){background-color: rgb(30, 110, 10); }
+.rgbcontainer div:nth-child(2){background-color: rgb(231, 69, 199);}
+.rgbcontainer div:nth-child(3){background-color: rgb(255, 0, 166);}
+
+.hexcontainer div:nth-last-child(1){background-color: #ff12ff;}
+.hexcontainer div:nth-last-child(2){background-color: #e87878;}
+.hexcontainer div:nth-last-child(3){background-color: #5dff12;}
+
+/*position*/
+.imgcontainer{
+    width: 500px;
+    box-shadow: 2px 2px 5px cornflowerblue;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative; /* position: allows to use top, left, bottom controlling around it*/
+    top: 20px;
+    left: 100px;
+
+}
+.imgtitle{
+    background-color: rgba(52, 151, 221, 0.5);
+    position: absolute;
+    top: 90px;
+    left: 20px;
+    right: 20px;
+    padding: 2%;
+    text-align: center;
+    font-size: 1.5em;
+}
+.fixedtabs{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+/*Background image*/
+.imgbackground, .imgbackground2 {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.imgbackground div, .imgbackground2 div{
+    width: 30%;
+    height: 200px;
+    border: solid gray 1px;
+}
+
+.imgbackground div:nth-child(1){background-image: linear-gradient(rgb(190, 41, 41), darkblue);}
+.imgbackground div:nth-child(2){background-image: linear-gradient(to right, red, darkblue);}
+.imgbackground div:nth-child(3){background-image: linear-gradient(to bottom left, red, darkblue);}
+
+.imgbackground2 div:nth-child(1){background-image: linear-gradient(to top right, red, darkblue, yellow);}
+.imgbackground2 div:nth-child(2){background-image: linear-gradient( red, darkblue, yellow, purple);}
+.imgbackground2 div:nth-child(3){background-image: linear-gradient( red 20%, darkblue 60%, yellow 30%, purple 80%);}
+
+/*hero image*/
+.heroimgcontainer{
+    width: 800px;
+    height: 500px;
+    margin: auto;
+    border: solid gray 1px;
+    background-image:linear-gradient(to top, rgba(255, 0, 0, 0.649), #0909a092),url("images/view_from_window.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.herocontent{
+    background-color: rgba(208, 207, 237, 0.5);
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    right: 10%;
+    color: white;
+    border-radius: 10px; 
+    box-shadow: 1px 1px 5px black;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5em;
+}
+.herocontent_title{
+    color: rgba(21, 244, 170, 0.844);
+
+}
+.herocontent_intro{
+    margin-top: -30px;
+    font-size: 0.8em;
+    font-style: italic;
+}
+.herocontent_link{
+    background-color: rgba(216, 112, 147, 0.632);
+    color: white;
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+}
+.herocontent_link:hover{
+    background-color: rgba(0, 0, 255, 0.549);
+    color: coral;
+    font-weight: bolder;
+}
