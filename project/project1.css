@@ -1,0 +1,394 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'Lato', sans-serif;
+}
+
+#navbar{
+    background: rgb(233, 176, 176);
+}
+#logo{
+    font-size: 36px;
+    font-weight: 700;
+    color: rgba(235, 58, 27, 0.799);
+    text-shadow: 0px 1px 1px rgb(168, 131, 131);
+    margin-bottom: 5px;
+}
+#logo span{
+    color:rgba(66, 66, 239, 0.704);
+}
+
+
+.navbar-toggler span{
+    color: rgba(66, 66, 239, 0.704);
+
+}
+.navbar-nav{
+    margin-left: 20px;
+}
+.nav-item .nav-link{
+    font-size: 16px;
+    font-weight: 550;
+    color: black;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    transition: 0.5s ease;
+}
+.nav-item .nav-link:hover{
+    background-color: bisque;
+    color: white;
+}
+
+#navbar form button{
+    background: #499fe5;
+    color: white;
+    border: none;
+}
+
+/* Home Section Start */
+.home{
+    width: 100%;
+    height: 90vh;
+    background-image: linear-gradient(rgba(71, 52, 52, 0.712),rgba(168, 105, 105, 0.703)), url(./images/World-Data-Locator-Map-Thailand.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.home .content{
+    text-align: center;
+    padding-top: 200px;
+}
+.home .content h2{
+    color: white;
+    font-size: 38px;
+    font-weight: 550;
+    
+    background: linear-gradient(rgba(159, 75, 42, 0.711), rgb(91, 20, 132));
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.home .content .hello{
+    padding: 1em;
+}
+
+.home .content h1{
+    color: white;
+    font-size: 70px;
+    font-weight: 550;
+    text-shadow: 0px 1px 1px black;
+    margin-top: 95px;
+
+}
+
+.hello::after{
+    content:'';
+    color: white;
+    text-shadow:0px 1px 1px black;
+    animation: hellotext 15s infinite linear;
+}
+@keyframes hellotext{
+    0%{content: "Hello";}
+    5%{content: "Hei";}
+    10%{content: "Nǐn hǎo";}
+    15%{content: "Bonjour";}
+    20%{content: "Salam";}
+    25%{content: "Hola";}
+    30%{content: "Kon'nichiwa";}
+    50%{content: "Sawasdee";}
+    100%{content: "สวัสดี";}
+    
+
+}
+
+.changecontent::after{
+    content: ' ';
+    color: #dc6b54;
+    text-shadow: 0px 1px 1px black;
+    animation: changetext 10s infinite linear;
+}
+@keyframes changetext{
+    0%{content: "Bangkok";}
+    10%{content: "Ayutthaya";}
+    20%{content: "Lopburi";}
+    30%{content: "North";}
+    40%{content: "South";}
+    50%{content: "Chiangmai";}
+    60%{content: "Chiangrai";}
+    70%{content: "Phuket";}
+    80%{content: "Ko Lipe";}
+    90%{content: "Ko Kood";}
+    100%{content: "Andaman Sea";}
+} 
+.home .content p{
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    text-shadow: 0px 1px 1px black;
+    margin-bottom: 30px;
+    margin-top: 60px;
+}
+.home .content a{
+    padding: 10px;
+    background: white;
+    color: black;
+    letter-spacing: 2px;
+    font-weight: 550;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.home .content a:hover{
+    background: #499fe5;
+    color: rgb(255, 255, 255);
+}
+@media (max-width:850px){
+    .home{
+        background-position: 50%;
+    }
+}
+@media (max-width:450px){
+    .home .content h5{
+        font-size: 25px;
+    }
+    .home .content h1{
+        font-size: 38px;
+    }
+    .home .content p{
+        font-size: 13px;
+    }
+}
+/* Home Section End */
+
+/* Section Book Start */
+.book{
+    background: #f9f9f9;
+    padding: 50px;
+}
+.main-text h1{
+    text-align: center;
+    text-shadow: 0px 1px 1px black;
+    font-weight: 600;
+}
+.main-text h1 span{
+    color: #d33b0d;
+}
+.book .card{
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px -6px black;
+}
+.book .row{
+    margin-top: 30px;
+}
+.book form input{
+    padding: 10px;
+    color: black;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px -6px black;
+}
+.book form textarea{
+    border: none;
+    border-radius: 10px;
+    resize: none;
+    box-shadow: 0px 5px 5px -6px black;
+    height: 200px;
+}
+.book .submit{
+    width: 160px;
+    font-size: 16px;
+    font-weight: 550;
+    background: #499fe5;
+    color: white;
+    margin-top: 10px;
+    transition: 0.5s;
+}
+.book .submit:hover{
+    width: 170px;
+}
+@media (max-width:765px){
+    .book{
+        padding: 0;
+    }
+    .main-text h1{
+        padding: 20px;
+    }
+}
+/* Section Book End */
+
+
+
+/* Section Packages Start */
+.main-txt h1{
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600;
+    text-shadow: 0px 1px 1px black;
+}
+
+.main-txt h1 span{
+    color: #d33b0d;
+}
+.packages .card{
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+}
+.packages .card img{
+    border-radius: 5px;
+}
+.packages .card .card-body{
+    background: transparent;
+}
+.packages .card .card-body h3{
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+.packages .card .card-body p{
+    font-size: 15px;
+}
+.checked{
+    color: rgb(255, 153, 0);
+}
+.star i{
+    font-size: 15px;
+}
+.packages .card .card-body h6{
+    font-size: 20px;
+}
+.packages .card .card-body a{
+    padding: 10px;
+    text-decoration: none;
+    background: #499fe5;
+    color: white;
+    border-radius: 5px;
+}
+/* Section Packages End */
+
+/* Section Services Start */
+.services{
+    background: #f9f9f9;
+    margin-top: 50px;
+}
+.services .card{
+    box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+    border: none;
+    cursor: pointer;
+}
+.services .card i{
+    font-size: 80px;
+    text-align: center;
+    color:  #ef5731;
+    margin-top: 20px;
+}
+.services .card .card-body h3{
+    font-weight: 600;
+}
+.services .card .card-body{
+    text-align: center;
+}
+/* Section Services End */
+
+
+
+
+
+/* Section Gallery Start */
+.gallery{
+    margin-top: 50px;
+}
+.gallery .card{
+    border-radius: 10px;
+    box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+    cursor: pointer;
+}
+.gallery .card img{
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.gallery .card img:hover{
+    transform: scale(1.1);
+}
+/* Section Gallary End */
+
+/* About Start */
+.about{
+    padding: 50px;
+    margin-top: 50px;
+    background: #f9f9f9;
+}
+.about .card{
+    border-radius: 10px;
+}
+.about .card img{
+    border-radius: 10px;
+}
+.about h2{
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.about p{
+    font-weight: 500;
+}
+#about-btn{
+    width: 150px;
+    height: 38px;
+    border: none;
+    border-radius: 5px;
+    background:  #e58049;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 550;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+#about-btn:hover{
+    width: 170px;
+}
+@media (max-width:765px){
+    .about{
+        padding: 0;
+    }
+}
+/* About End */
+
+
+
+
+/* Footer Start */
+#footer{
+    width: 100%;
+    margin-top: 150px;
+    text-align: center;
+    background: #f9f9f9;
+}
+#footer h1{
+    font-weight: 600;
+    padding-top: 30px;
+    text-shadow: 0px 0px 1px black;
+}
+#footer h1 span{
+    color: #d33b0d;
+}
+.social-links i{
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    background: black;
+    color: white;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.social-links i:hover{
+    background:  #499fe5;
+}
+/* Footer End */
