@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container my-5">
+  <h2 class="text-center mb-4">Make a Reservation</h2>
+  <form method="POST" action="{{ url_for('views.reserve') }}">
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="name" class="form-label">Full Name</label>
+        <input type="text" name="name" class="form-control" required>
+      </div>
+      <div class="col-md-6">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" name="email" class="form-control" required>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="phone" class="form-label">Phone Number</label>
+        <input type="text" name="phone" class="form-control" required>
+      </div>
+      <div class="col-md-3">
+        <label for="date" class="form-label">Date</label>
+        <input type="date" name="date" class="form-control" required>
+      </div>
+      <div class="col-md-3">
+        <label for="time" class="form-label">Time</label>
+        <input type="time" name="time" class="form-control" required>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="guests" class="form-label">Number of Guests</label>
+      <input type="number" name="guests" class="form-control" required min="1">
+    </div>
+    <div class="mb-3">
+      <label for="message" class="form-label">Additional Notes (Optional)</label>
+      <textarea name="message" class="form-control" rows="4"></textarea>
+    </div>
+    <div class="d-grid">
+      <button type="submit" class="btn btn-primary">Submit Reservation</button>
+    </div>
+  </form>
+</div>
+{% endblock %}

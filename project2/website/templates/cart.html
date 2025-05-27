@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Your Cart{% endblock %}
+{% block content %}
+<h2 class="mb-4 text-center">Your Cart</h2>
+{% if cart_items %}
+<div class="table-responsive">
+  <table class="table table-hover align-middle text-center">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">Item</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Price</th>
+        <th scope="col">Subtotal</th>
+        <th scope="col">Remove</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for entry in cart_items %}
+      <tr>
+        <td>{{ entry.item.name }}</td>
+        <td><span class="badge bg-secondary">{{ entry.quantity }}</span></td>
+        <td>${{ "%.2f"|format(entry.item.price) }}</td>
+        <td>${{ "%.2f"|format(entry.item.price * entry.quantity) }}</td>
+        <td>
+          <a href="{{ url_for('cart.remove_cart_item', item_id=entry.item.id) }}" class="btn btn-sm btn-outline-danger">
+            ✖
+          </a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<div class="d-flex justify-content-between align-items-center mt-4">
+  <h4>Total: ${{ "%.2f"|format(total) }}</h4>
+  <a href="{{ url_for('cart.checkout') }}" class="btn btn-lg btn-success">Proceed to Checkout</a>
+</div>
+{% else %}
+<p class="text-center">Your cart is empty. <a href="/menu">Browse menu</a> to add items.</p>
+{% endif %}
+{% endblock %}

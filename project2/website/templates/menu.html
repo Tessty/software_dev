@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container my-5">
+  <h1 class="text-center mb-4">Our Menu</h1>
+
+  <div class="row">
+    {% for item in menu_items %}
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow-sm">
+        <img src="{{ url_for('static', filename='images/' + item.image) }}" class="card-img-top" alt="{{ item.name }}" style="height: 250px; object-fit: cover;">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">{{ item.name }}</h5>
+          <p class="card-text">{{ item.description }}</p>
+          <p class="card-text fw-bold text-primary">${{ "%.2f"|format(item.price) }}</p>
+
+          <form method="POST" action="{{ url_for('cart.add_to_cart', item_id=item.id) }}" class="mt-auto">
+            <div class="input-group">
+              <input type="number" name="quantity" class="form-control" value="1" min="1" required>
+              <button type="submit" class="btn btn-success">Add to Cart</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
+
+ <!--- checking when /menu not loaded use python -m website.web_menu This runs web_menu.py as part of the website package.
+  {% if menu_items %}
+    <p class="text-success">✅ Items loaded: {{ menu_items|length }}</p>
+  {% else %}
+    <p class="text-danger">❌ No menu items loaded.</p>
+  {% endif %}
+  {% for item in menu_items %}
+  <p>{{ item.name }} — {{ item.image }}</p>
+{% endfor %}--->
+ 

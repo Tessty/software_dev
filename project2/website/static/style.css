@@ -1,0 +1,23 @@
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+.card {
+  border-radius: 15px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+input[type="number"] {
+  max-width: 70px;
+}

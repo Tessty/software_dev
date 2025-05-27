@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Welcome to Jazkaya{% endblock %}
+{% block content %}
+<section class="hero-section text-center text-white py-5" style="background: url('/static/images/latterns.jpg') center/cover no-repeat;">
+<link rel="stylesheet" href="../static/style.css">
+  <div class="container animate__animated animate__fadeIn">
+    <h1 class="display-3 fw-bold">Jazkaya Japanese Izakaya</h1>
+    <p class="lead">Traditional Japanese dining in a cozy, modern setting.</p>
+    <a href="/menu" class="btn btn-outline-light btn-lg mt-3">Explore the Menu</a>
+  </div>
+</section>
+
+<section class="container py-5">
+  <div class="row align-items-center">
+    <div class="col-md-6 animate__animated animate__fadeInLeft">
+      <img src="/static/images/s1.jpg" alt="Interior" class="img-fluid rounded shadow-sm">
+    </div>
+    <div class="col-md-6 animate__animated animate__fadeInRight">
+      <h2>Our Story</h2>
+      <p>At Jazkaya, we bring the spirit of Japan’s izakayas to life with a warm ambiance, expertly crafted dishes, and unmatched hospitality.</p>
+      <a href="/reserve" class="btn btn-primary mt-3">Reserve a Table</a>
+    </div>
+  </div>
+</section>
+{% endblock %}
